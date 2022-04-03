@@ -19,6 +19,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="false"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".Splash"
+            android:exported="false" />
         <!--
          This tag indicates that this application requires ARCore. This results in the
             application only being visible in the Google Play Store on devices that support
@@ -27,6 +30,7 @@
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
+
         <activity
             android:name=".VirtualTryOnActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
@@ -34,13 +38,11 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Splash"
+            android:name=".HomePage"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
