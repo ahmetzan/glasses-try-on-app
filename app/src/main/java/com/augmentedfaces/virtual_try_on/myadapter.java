@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,9 @@ import java.util.ArrayList;
 
 public class myadapter extends RecyclerView.Adapter<myviewholder>
 {
-   ArrayList<Model> data;
-   Context context;
+
+    ArrayList<Model> data;
+    Context context;
     public myadapter(ArrayList<Model> data, Context context)
 
     {
@@ -44,7 +46,6 @@ public class myadapter extends RecyclerView.Adapter<myviewholder>
        holder.img.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-
                  Intent intent=new Intent(context,VirtualTryOnActivity.class);
                  intent.putExtra("imagename",temp.getImgname());
                  intent.putExtra("header",temp.getHeader());

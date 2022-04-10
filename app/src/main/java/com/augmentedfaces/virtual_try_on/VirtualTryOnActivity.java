@@ -3,6 +3,7 @@ package com.augmentedfaces.virtual_try_on;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -58,8 +59,7 @@ public class VirtualTryOnActivity extends AppCompatActivity {
 
     Models_Adapter mAdapter;
     RecyclerView recyclerView;
-    int image_position = 0;
-
+    int image_position;
     @Override
     @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
     // CompletableFuture requires api level 24
@@ -70,7 +70,17 @@ public class VirtualTryOnActivity extends AppCompatActivity {
         if (!checkIsSupportedDeviceOrFinish(this)) {
             return;
         }
-
+        Intent intent=getIntent();
+        String glassName=intent.getStringExtra("header");
+        if(glassName.equals("C Programming")){
+            image_position=0;
+        }else if(glassName.equals("C++ Programming")){
+            image_position=1;
+        }else if(glassName.equals("Java Programming")){
+            image_position=2;
+        }else{
+            image_position=3;
+        }
         setContentView(R.layout.activity_virtual_try);
 
         FaceArFragment arFragment = (FaceArFragment) getSupportFragmentManager().findFragmentById(R.id.face_fragment);
