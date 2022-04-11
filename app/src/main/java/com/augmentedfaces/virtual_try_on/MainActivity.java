@@ -37,25 +37,25 @@ public class MainActivity extends AppCompatActivity {
         Model ob1=new Model();
         ob1.setHeader("C Programming");
         ob1.setDesc("Desktop Programming");
-        ob1.setImgname(R.drawable.cp);
+        ob1.setImgname(R.drawable.gl2);
         holder.add(ob1);
 
         Model ob2=new Model();
         ob2.setHeader("C++ Programming");
         ob2.setDesc("Desktop Progamming Language");
-        ob2.setImgname(R.drawable.cpp);
+        ob2.setImgname(R.drawable.fdf);
         holder.add(ob2);
 
         Model ob3=new Model();
         ob3.setHeader("Java Programming");
         ob3.setDesc("Desktop Progamming Language");
-        ob3.setImgname(R.drawable.java);
+        ob3.setImgname(R.drawable.gr);
         holder.add(ob3);
 
         Model ob4=new Model();
         ob4.setHeader("PHP Programming");
         ob4.setDesc("Web Progamming Language");
-        ob4.setImgname(R.drawable.php);
+        ob4.setImgname(R.drawable.am_body);
         holder.add(ob4);
 
 //        Model ob5=new Model();
