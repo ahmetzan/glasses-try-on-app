@@ -72,11 +72,11 @@ public class VirtualTryOnActivity extends AppCompatActivity {
         }
         Intent intent=getIntent();
         String glassName=intent.getStringExtra("header");
-        if(glassName.equals("C Programming")){
+        if(glassName.equals("Beyaz Gözlük")){
             image_position=0;
-        }else if(glassName.equals("C++ Programming")){
+        }else if(glassName.equals("Siyah Gözlük")){
             image_position=1;
-        }else if(glassName.equals("Java Programming")){
+        }else if(glassName.equals("Yeşil Gözlük")){
             image_position=2;
         }else{
             image_position=3;

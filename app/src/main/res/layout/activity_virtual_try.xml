@@ -38,14 +38,15 @@
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_gravity="center"
         android:layout_width="145dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:max="2"
-        android:progressTint="@android:color/transparent"
         android:progressDrawable="@drawable/seek_bar"
+        android:progressTint="@android:color/transparent"
         android:thumb="@drawable/seek_thumb"
-        />
+        android:visibility="invisible"
+        tools:visibility="invisible" />
 
     <LinearLayout
         android:layout_gravity="center"
